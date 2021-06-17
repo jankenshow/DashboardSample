@@ -1,0 +1,17 @@
+# Mac
+.DS_Store
+
+# node
+.node-version
+node_modules
+
+# build
+build/
+
+# images
+# images/
+
+# logs
+*.log
+*.logs
+log/
