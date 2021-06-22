@@ -34,6 +34,12 @@ $ npx serve
 
 ## advanced settings
 
+#### favicon
+
+See `webpack/webpack.common.js`.
+
+In this file, favicon is configurated by HtmlWebpackPlugin which loads an image as favicon.
+
 #### bootstrap
 
 Add packages below,
@@ -84,6 +90,8 @@ import "bootstrap";
 import "./index.scss";
 ```
 
+-> 導入しているのは dart-sass なので、scss 内で利用するのは`@import`ではなく、`@use / @forward`を利用すべきらしい。
+
 #### extract css files
 
 ```
@@ -93,3 +101,13 @@ $ yarn add -D mini-css-extract-plugin
 set style-loader to off, and use this plugin in `webpack.dev/prod.js`.
 
 copy files which (s)css files are loading using `CopyPlugin` in `webpack.common.js`, if needed.
+
+#### minify
+
+-> TODO
+
+## TODO
+
+-   minify
+-   redux / flux
+-   restriction for `asset/inline` settings by file size.
