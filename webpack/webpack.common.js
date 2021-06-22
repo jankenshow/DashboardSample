@@ -31,6 +31,10 @@ module.exports = {
                 test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
                 type: 'asset/inline',
             },
+            {
+                test: /\.ttf$/,
+                type: 'asset/resource',
+            },
         ],
     },
     plugins: [
