@@ -1,6 +1,4 @@
-import '../../css/topbar.scss'
 import IMAGE from '../../images/react.png'
-// import React from 'react'
 import { NotificationsNone, Language, Settings } from '@material-ui/icons'
 
 export default function Topbar() {

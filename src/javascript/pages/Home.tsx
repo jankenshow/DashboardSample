@@ -1,5 +1,3 @@
-import '../../css/home.scss'
-import React from 'react'
 import FeaturedInfo from '../components/FeaturedInfo'
 import Chart from '../components/Chart'
 import WidgetSmall from '../components/WidgetSmall'

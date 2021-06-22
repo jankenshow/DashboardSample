@@ -1,3 +1,12 @@
+@use './app';
+@use './pages/home';
+@use './components/chart';
+@use './components/featuredInfo';
+@use './components/sidebar';
+@use './components/topbar';
+@use './components/widgetLarge';
+@use './components/widgetSmall';
+
 @font-face {
     font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;

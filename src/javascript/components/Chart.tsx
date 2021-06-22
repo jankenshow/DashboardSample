@@ -1,4 +1,3 @@
-import '../../css/chart.scss'
 import { FC } from 'react'
 import {
     LineChart,

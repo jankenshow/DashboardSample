@@ -1,4 +1,3 @@
-import '../../css/featuredInfo.scss'
 import { ArrowDownward, ArrowUpward } from '@material-ui/icons'
 
 export default function FeaturedInfo() {
