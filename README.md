@@ -111,3 +111,5 @@ copy files which (s)css files are loading using `CopyPlugin` in `webpack.common.
 -   minify
 -   redux / flux
 -   restriction for `asset/inline` settings by file size.
+-   electron
+-   set production environment for eact-router-dom with express

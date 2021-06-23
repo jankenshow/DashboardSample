@@ -24,9 +24,12 @@ type singleData = {
 const Chart: FC<ChartProps> = ({ title, data, dataKey, grid }) => {
     return (
         <div className="chart">
-            <h3 className="chartTitle">{title}</h3>
+            <span className="chartTitle">{title}</span>
             <ResponsiveContainer width="100%" aspect={4 / 1}>
-                <LineChart data={data}>
+                <LineChart
+                    margin={{ top: 20, left: 0, right: 0, bottom: 0 }}
+                    data={data}
+                >
                     <XAxis dataKey="name" stroke="#5550bd" />
                     <Line type="monotone" dataKey={dataKey} stroke="#5550bd" />
                     <Tooltip />
