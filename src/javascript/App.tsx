@@ -1,8 +1,9 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Topbar from './components/Topbar'
 import Home from './pages/Home'
 import UserList from './pages/UserList'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import NotFoundPage from './pages/NotFound'
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
                         <Route path="/users">
                             <UserList />
                         </Route>
+                        <Route path="*" component={NotFoundPage} />
                     </Switch>
                 </div>
             </div>
