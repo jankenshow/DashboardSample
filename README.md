@@ -1,7 +1,7 @@
 ## node version
 
 node@14.17.0  
-npm@7.16.0
+npm@7.16.0  
 yarn@1.22.10
 
 ## installation
@@ -108,8 +108,10 @@ copy files which (s)css files are loading using `CopyPlugin` in `webpack.common.
 
 ## TODO
 
--   minify
--   redux / flux
--   restriction for `asset/inline` settings by file size.
--   electron
--   set production environment for eact-router-dom with express
+-   [ ] use webpack alias for path of import files
+-   [ ] minify
+-   [ ] redux / flux
+-   [ ] restriction for `asset/inline` settings by file size.
+-   [x] set production environment for eact-router-dom with express
+-   [ ] electron in another repo/branch
+-   [ ] SSR app in another repo/branch
