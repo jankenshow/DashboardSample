@@ -28,8 +28,7 @@ $ yarn start
 
 ```
 $ yarn build
-$ cd build
-$ npx serve
+$ yarn serve
 ```
 
 ## advanced settings
