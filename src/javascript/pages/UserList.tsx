@@ -1,9 +1,4 @@
-import {
-    DataGrid,
-    GridColDef,
-    GridCellParams,
-    // GridValueGetterParams,
-} from '@material-ui/data-grid'
+import { DataGrid, GridColDef, GridCellParams } from '@material-ui/data-grid'
 import { DeleteOutline } from '@material-ui/icons'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -14,20 +9,8 @@ export default function UserList() {
 
     const handleDelete = (id: number) => {
         let newData = data.slice()
-        // delete selected user with id -> this gonna raise an error.
-        // newData = newData.filter((item) => item.id !== id)
-        // update selected user's age
-        newData = newData.map((item) => {
-            if (item.id == id) {
-                item.age = 2000
-                return item
-            } else {
-                return item
-            }
-        })
+        newData = newData.filter((item) => item.id !== id)
         setData(newData)
-        console.log(data)
-        console.log(newData)
     }
 
     const UserListIcon = (params: GridCellParams) => {
@@ -40,23 +23,18 @@ export default function UserList() {
         )
     }
 
-    const UserListActionButtonWrapper = (
-        handleDelete: (id: number) => void
-    ) => {
-        const UserListActionButton = (params: GridCellParams) => {
-            return (
-                <>
-                    <Link to={'/user/' + params.row.id}>
-                        <button className="userListEdit">Edit</button>
-                    </Link>
-                    <DeleteOutline
-                        className="userListDelete"
-                        onClick={() => handleDelete(params.row.id)}
-                    />
-                </>
-            )
-        }
-        return UserListActionButton
+    const UserListActionButton = (params: GridCellParams) => {
+        return (
+            <>
+                <Link to={'/user/' + params.row.id}>
+                    <button className="userListEdit">Edit</button>
+                </Link>
+                <DeleteOutline
+                    className="userListDelete"
+                    onClick={() => handleDelete(params.row.id)}
+                />
+            </>
+        )
     }
 
     const columns: GridColDef[] = [
@@ -82,7 +60,7 @@ export default function UserList() {
             field: 'action',
             headerName: 'Action',
             width: 150,
-            renderCell: UserListActionButtonWrapper(handleDelete),
+            renderCell: UserListActionButton,
         },
     ]
 
