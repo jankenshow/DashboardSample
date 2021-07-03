@@ -17,8 +17,9 @@ export default function UserList() {
         return (
             <div className="userListUser">
                 <img src={params.row.avatar} alt="" className="userListImage" />
-                {params.getValue(params.id, 'firstName') || ''}{' '}
-                {params.getValue(params.id, 'lastName') || ''}
+                {/* {params.getValue(params.id, 'firstName') || ''}{' '}
+                {params.getValue(params.id, 'lastName') || ''} */}
+                {params.row.firstName + ' ' + params.row.lastName}
             </div>
         )
     }

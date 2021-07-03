@@ -1,6 +1,8 @@
 @use './app';
 @use './pages/home';
 @use './pages/userList';
+@use './pages/user';
+@use './pages/newUser';
 @use './pages/notFound';
 @use './components/chart';
 @use './components/featuredInfo';

@@ -3,6 +3,8 @@ import Sidebar from './components/Sidebar'
 import Topbar from './components/Topbar'
 import Home from './pages/Home'
 import UserList from './pages/UserList'
+import User from './pages/User'
+import NewUser from './pages/NewUser'
 import NotFoundPage from './pages/NotFound'
 
 const App = () => {
@@ -13,12 +15,10 @@ const App = () => {
                 <div className="container">
                     <Sidebar />
                     <Switch>
-                        <Route path="/" exact>
-                            <Home />
-                        </Route>
-                        <Route path="/users">
-                            <UserList />
-                        </Route>
+                        <Route path="/" component={Home} exact />
+                        <Route path="/users" component={UserList} />
+                        <Route path="/user/:userId" component={User} />
+                        <Route path="/newUser" component={NewUser} />
                         <Route path="*" component={NotFoundPage} />
                     </Switch>
                 </div>
