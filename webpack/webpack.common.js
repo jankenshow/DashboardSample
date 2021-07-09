@@ -3,12 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-    mode: 'development',
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     output: {
         path: path.resolve(__dirname, '..', './build'),
         filename: 'bundle.js',
-        publicPath: '/',
+        publicPath: './',
     },
     resolve: {
         alias: {
