@@ -3,9 +3,17 @@ import { DeleteOutline } from '@material-ui/icons'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { userListRows } from '../data/dummyUserList'
+// import { useAuthUser, useLogout } from '../addons/LoginAuth'
 
 export default function UserList() {
     const [data, setData] = useState(userListRows)
+    // const authUser = useAuthUser()
+    // const logout = useLogout()
+
+    // const handleEdit = () => {
+    //     console.log(authUser)
+    //     logout()
+    // }
 
     const handleDelete = (id: number) => {
         let newData = data.slice()
@@ -28,7 +36,12 @@ export default function UserList() {
         return (
             <>
                 <Link to={'/user/' + params.row.id}>
-                    <button className="userListEdit">Edit</button>
+                    <button
+                        className="userListEdit"
+                        // onClick={() => handleEdit()}
+                    >
+                        Edit
+                    </button>
                 </Link>
                 <DeleteOutline
                     className="userListDelete"
