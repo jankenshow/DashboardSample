@@ -65,12 +65,15 @@ const UnAuthRoute: React.FC<RouteProps> = ({ ...props }) => {
         console.log(
             `ログイン済みのユーザーは${props.path}へはアクセスできません`
         )
+        // console.log(from)
+        // TODO - ログインした状態で/loginにアクセスするとCannot read property 'from' of undefinedとなる
         return <Redirect to={from ?? '/'} />
     } else {
         return <Route {...props} />
     }
 }
 
+// TODO use cookie to get authuser
 export const useAuthUser = () => useContext(AuthUserContext)
 export const useLogin = () => useContext(AuthOperationContext).login
 export const useLogout = () => useContext(AuthOperationContext).logout
