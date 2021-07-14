@@ -7,6 +7,7 @@
         "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
         "build": "webpack --config webpack/webpack.config.js --env env=prod",
         "serve": "node server/index.ts",
+        "gui": "electron ./gui/main.ts",
         "test": "echo \"Error: no test specified\" && exit 1",
         "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
         "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
@@ -51,6 +52,7 @@
         "babel-loader": "^8.2.2",
         "copy-webpack-plugin": "^9.0.0",
         "css-loader": "^5.2.6",
+        "electron": "^13.1.6",
         "eslint": "^7.28.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "^2.23.4",
