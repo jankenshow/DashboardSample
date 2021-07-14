@@ -6,9 +6,9 @@ import {
     Storefront,
     AttachMoney,
     BarChart,
-    MailOutline,
-    DynamicFeed,
-    ChatBubbleOutline,
+    // MailOutline,
+    // DynamicFeed,
+    // ChatBubbleOutline,
     WorkOutline,
     Report,
 } from '@material-ui/icons'
@@ -43,16 +43,16 @@ export default function Sidebar() {
                         <Link to="/users" className="sidebarListItemLink">
                             <li className="sidebarListItem">
                                 <PersonOutline className="sidebarIcon" />
-                                Users
+                                Staffs
                             </li>
                         </Link>
                         <li className="sidebarListItem">
                             <Storefront className="sidebarIcon" />
-                            Products
+                            Projects
                         </li>
                         <li className="sidebarListItem">
                             <AttachMoney className="sidebarIcon" />
-                            Transactions
+                            Resources
                         </li>
                         <li className="sidebarListItem">
                             <BarChart className="sidebarIcon" />
@@ -60,7 +60,7 @@ export default function Sidebar() {
                         </li>
                     </ul>
                 </div>
-                <div className="sidebarMenu">
+                {/* <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Notifications</h3>
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
@@ -76,21 +76,21 @@ export default function Sidebar() {
                             Messages
                         </li>
                     </ul>
-                </div>
+                </div> */}
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTitle">Staff</h3>
+                    <h3 className="sidebarTitle">Other</h3>
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
                             <WorkOutline className="sidebarIcon" />
-                            Manage
+                            Application form
                         </li>
                         <li className="sidebarListItem">
                             <Timeline className="sidebarIcon" />
-                            Analytics
+                            Goods management
                         </li>
                         <li className="sidebarListItem">
                             <Report className="sidebarIcon" />
-                            Reports
+                            Attendance
                         </li>
                     </ul>
                 </div>
